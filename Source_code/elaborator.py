@@ -99,7 +99,7 @@ def parse_srt_file(srt_path):
 
     pattern = (
         r"(?:latitude:\s*([+-]?\d+(?:\.\d+)?).*?longitude:\s*([+-]?\d+(?:\.\d+)?).*?(?:abs_alt|altitude):\s*([+-]?\d+(?:\.\d+)?))|"
-        r"(?:GPS\s*\(\s*([+-]?\d+(?:\.\d+)?),\s*([+-]?\d+(?:\.\d+)?),\s*([+-]?\d+(?:\.\d+)?))|"
+        r"GPS\s*\(\s*([+-]?\d+(?:\.\d+)?),\s*([+-]?\d+(?:\.\d+)?),\s*[+-]?\d+(?:\.\d+)?\)\s*,\s*D\s*[+-]?\d+(?:\.\d+)?m,\s*H\s*([+-]?\d+)"
         r"(?:\[latitude\s*:\s*([+-]?\d+(?:\.\d+)?)\]\s*\[longtitude\s*:\s*([+-]?\d+(?:\.\d+)?)\])"
     )
     if "abs_alt" in srt_content:
